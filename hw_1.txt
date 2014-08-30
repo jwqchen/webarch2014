@@ -1,0 +1,16 @@
+1. Your experience with web archtecture. Have you 
+written 
+HTML before? Written Javascript? etc.
+I don’t have much experience with web architecture (yet 
+:). I can write some basic HTML/CSS, haven’t learned 
+Javascript but really want to learn it. Through this 
+class, I hope to change my current feeling of inadequacy 
+towards building websites.
+
+2. What are your favorite features from at least 2 
+browsers?
+Chrome: No popup command boxes. Everything opens up neatly 
+in a tab.
+Firefox: I don’t have a favorite Firefox feature. But I 
+like its interface design. :)
+
