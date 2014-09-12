@@ -1,5 +1,6 @@
+/*cascading happens here. the sans-serif font under h2, h3 and h4 overrides the Verdana font under body.*/
 body {
-	font-family:Vernana;
+	font-family:Verdana;
 	font-size: 24px;
 }
 
