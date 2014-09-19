@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Madlib!</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<!--insert more links-->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/main.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class = "form" id="madlib-input-overall">
+			<form id="madlib-input" onsubmit="return false">
+				<div class = "formTitle">
+					<div class = "container">
+						<div class = "col-md-12">
+							<div class = "row">
+								<h1>Please input your answers below!</h1>	
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class = "row">
+								<div class = "col-md-5">
+									<p>Whats your favorite household item?</p>
+								</div>
+								<div class="col-md-7">
+									<input id="input_1" type="text" name="householdItem" placeholder="Household Items">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-5">
+									<p>How many pets do you have?</p>
+								</div>
+								<div class="col-md-7">
+									<input id = "input_2" type="text" name="pet" placeholder="Enter a number">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class = "row">
+								<div class = "col-md-5">
+									<p>What's your favorite season?</p>
+								</div>
+								<div class="col-md-7">
+									<label><input id="input_3_1" type="radio" name="season" value="spring">Spring</label><br>
+									<label><input id="input_3_2" type="radio" name="season" value="summer">Summer</label><br>	
+									<label><input id="input_3_3" type="radio" name="season" value="fall">Fall</label><br>
+									<label><input id="input_3_4" type="radio" name="season" value="winter">Winter</label><br>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class = "row">
+								<div class="col-md-5">
+									<p>What food do you like?</p>
+								</div>
+								<div class ="col-md-7">
+									<label><input id="input_4_1" type="checkbox" name="food" value = "Chinese">Chinese</label><br>
+									<label><input id="input_4_2" type="checkbox" name="food" value = "Indian">Indian</label><br>
+									<label><input id="input_4_3" type="checkbox" name="food" value = "Mexican">Mexican</label><br>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class = "row">
+								<div class="col-md-5">
+									<p>Which age range are you?</p>
+								</div>
+								<div class ="col-md-7">									
+									<label for="input_5">Age Range:</label>
+									<select id="input_5" name="age">
+										<option value="" selected="selected"> </option>
+										<option value= "0 - 29">"0 - 29"</option>
+										<option value= "30 - 59">"30 - 59"</option>
+										<option value= "60 - 99">"60 - 99"</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class = "row">
+								<input id="submitButton" type="submit" value="Get your madlib!"> 
+							</div>
+						</div>		
+					</div>
+				</div>		
+			</form>
+		</div>
+		
+		<div id="madlib-output">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<h3>Sorry For Party Rocking Part 5</h3>
+						<h6>--http://www.elibs.com/stories/playElibs/my-family-member</h6>
+						<p>
+							I'm true to the <span id="output_1"></span> too, it's called <span id="output_2"></span> pong and I can't lose I got a bunch of <span id="output_3"></span> in the <span id="output_4"></span> With <span id="output_5"></span> on tap and a little bit of oooo.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
