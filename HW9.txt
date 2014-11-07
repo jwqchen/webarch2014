@@ -1,0 +1,76 @@
+1，
+SELECT
+1.1 How many links were added afer 2014-10-14?
+
+Query:
+
+mysql> SELECT *
+    -> FROM `links`
+    -> WHERE `created` > '2014-10-14'
+    -> LIMIT 0 , 30;
+
+Result:
+
++-----------------------------------+-----------+-----------+------------+
+| long_url                          | short_url | hit_count | created    |
++-----------------------------------+-----------+-----------+------------+
+| http://baidu.com                  | 71bce     |        40 | 2014-10-22 |
+| http://disney.com                 | disne     |        40 | 2014-11-01 |
+| http://ebay.com                   | b0f7e     |        40 | 2014-10-17 |
+| http://gmail.com                  | gmail     |        40 | 2014-10-28 |
+| http://google.com                 | 891cb     |        40 | 2014-10-16 |
+| http://hao123.com                 | 9e898     |        40 | 2014-10-15 |
+| http://imgur.com/gallery/VskUDjn/ | meeoooww? |        40 | 2014-11-02 |
+| http://ischool.berkeley.edu       | abcd      |        40 | 2014-11-05 |
+| http://jong.me                    | hello     |        40 | 2014-11-04 |
+| http://live.com                   | d2c05     |        40 | 2014-10-15 |
+| http://wordpress.com              | 8686e     |        40 | 2014-10-20 |
+| http://www.twitter.com            | evolve    |        40 | 2014-11-06 |
++-----------------------------------+-----------+-----------+------------+
+12 rows in set (0.00 sec)
+
+
+1.2 How many links that were added before 2014-10-14 have fewer than 40 hits?
+
+Query:
+
+SELECT * 
+FROM  `links` 
+WHERE  `hit_count` <40
+AND  `created` <  '2014-10-14'
+LIMIT 0 , 30
+
+Result:
+
+Empty set
+
+2.
+INSERT
+2.1 Insert your own URL with a date before 2014-10-14 with greater than 40 hits.
+
+Query:
+
+INSERT INTO  `i253`.`links` (
+`long_url` ,
+`short_url` ,
+`hit_count` ,
+`created`
+)
+VALUES (
+'http://sohu.com',  'piglet',  '50',  '2014-10-01'
+);
+
+
+2.2 Is it possible that someone querying the database at the same time could see your insert partially complete (eg. only see some fields filled in)? What database property is this related to?
+
+No, it is not possible. The Isolation property of ACID makes sure that operations are separated from each other.
+
+3.
+UPDATE
+3.1 Increment the hit_count for only your new row. What is the new count?
+
+mysql> UPDATE links SET hit_count= hit_count +1 WHERE long_url='http://sohu.com';
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+The new count is 51.
