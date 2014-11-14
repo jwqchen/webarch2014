@@ -4,15 +4,25 @@
 		<title>
 			Welcome to Wenqin's Page!
 		</title>
+		<meta charset="utf-8">
+		<meta name="description" content="This is a fun page I made for the course Web Architecture." />
+		<meta name="keywords" content="Wenqin, Chen, Berkeley, School of Information, MIMS, user experience" />
+		<meta name="author" content="Wenqin Chen" />
 		<link rel="stylesheet" type="text/css" href="HW_2_CSS_1.css">
 		<link rel="stylesheet" type="text/css" href="HW_2_CSS_2.css">
+		<link rel="shortcut icon" href="network-64.ico" />
 	</head>
 	<body>
 			<!-- This is a skeleton site. Will expand it as the semester goes along -->
-		<div>
+		<div itemscope itemtype="http://schema.org/People">
 			<h1 style = "color: blue; background-color: yellow"> A little about myself</h1>
-			<p> Hi, my name is Wenqin Chen. I am a student at the Berkeley iSchool.</p>
+			<p> Hi, my name is <span itemprop="name">Wenqin Chen</span>. I am a <span itemprop="jobTitle">student</span> at the <span itemprop="affiliation">Berkeley iSchool</span>.You can reach me at <span itemprop="email">jwqchen at berkeley</span>. I am from <span itemprop="nationality">China</span> and currently live in <span itemprop="workLocation">Berkeley, California</span>.</p>
 		</div>
+		<div itemscope itemtype="http://schema.org/Organization">
+			<h1 style = "color: blue; background-color: yellow">About my program</h1>
+			<p>School: <span itemprop="name">UC Berkeley</span><br>URL: <span itemprop="url">http://www.ischool.berkeley.edu/</span><br>Department: <span itemprop="department">School of Information</span><br><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">Postal Address: <br>School of Information</br>University of California, Berkeley</br><span itemprop="streetAddress">102 South Hall #4600</span><br><span itemprop="addressLocality">Berkeley</span>, <span itemprop="addressRegion">CA</span> <span itemprop="postalCode">94720-4600</span></span><br>Phone: <span itemprop="telephone">(510) 642-1464</span><br>Email: <span itemprop="email">admissions@ischool.berkeley.edu</span>
+		</div>
+
 		<div>
 			<!--Cascading happens for h2-->
 			<h2> My hobbies </h2>
@@ -24,7 +34,7 @@
 		</div>
 		<div>
 			<!--Cascading happens for h3-->
-			<h3 id = "heros"> My heros </h3>
+			<h3 id = "heros">My heros</h3>
 			<ul>
 				<li class = "ballet">
 					<p>Polina Semionova</p>
@@ -43,6 +53,15 @@
 				<li> Chinese</li>
 				<li> Indian </li>
 				<li> Japanese </li>
+			</ol>
+		</div>
+		<div>
+			<!--Cascading happens for h3-->
+			<h3>Books I read recently</h3>
+			<ol>
+				<li><span itemscope itemtype="http://schema.org/Thing"><span itemprop="Name">Brave New World</span></span>, by <span itemscope itemtype="http://schema.org/Book"><span itemprop="author">Aldous Huxley</span></span></li>
+				<li><span itemscope itemtype="http://schema.org/Thing"><span itemprop="Name">The Secret Piano</span></span>, by <span itemscope itemtype="http://schema.org/Book"><span itemprop="author">Xiao-Mei Zhu</span></span></li>
+				<li><span itemscope itemtype="http://schema.org/Thing"><span itemprop="Name">The Paradox of Choice</span></span>, by <span itemscope itemtype="http://schema.org/Book"><span itemprop="author">Berry Schwartz</span></span></li>
 			</ol>
 		</div>
 		<div>
