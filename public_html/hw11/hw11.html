@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yet Another Web Arch Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta charset="utf-8">
+		<meta name="description" content="This is yet another fun page I made for the course Web Architecture." />
+		<meta name="keywords" content="Wenqin, Chen, Berkeley, School of Information, MIMS, user experience" />
+		<meta name="author" content="Wenqin Chen" />
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="responsive.css">
+		<link rel="shortcut icon" href="network-64.ico" />
+	</head>
+	<body>
+        <div id="container">
+			<div class="one-third mobile-collapse">
+				<p>Here are some pretty pictures I found:</p><br>
+				<img class="hide-mobile" style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://www.russianballet.com.au/wp-content/uploads/2013/10/20111113-Russian-Ballet-0244_800x531.jpg"><br>
+				<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://dancelines.com.au/wp-content/uploads/2013/11/Amy-Harris-in-Paquita-The-Australian-Ballet-2013-photo-Jeff-Busby_1133-e1384073369337.jpg"><br>
+				<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://images2.fanpop.com/image/photos/9700000/ballet-pics-ballet-9710858-350-473.jpg"><br>
+			</div>
+			<div class="one-third one-third-second mobile-collapse">
+				<p>Here are some pretty pictures I found:</p><br>
+				<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://www.russianballet.com.au/wp-content/uploads/2013/10/20111113-Russian-Ballet-0244_800x531.jpg"><br>
+				<img class="hide-mobile" style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://dancelines.com.au/wp-content/uploads/2013/11/Amy-Harris-in-Paquita-The-Australian-Ballet-2013-photo-Jeff-Busby_1133-e1384073369337.jpg"><br>
+				<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://images2.fanpop.com/image/photos/9700000/ballet-pics-ballet-9710858-350-473.jpg"><br>
+			</div>
+			<div class="one-third one-third-last mobile-collapse">
+				<p>Here are some pretty pictures I found:</p><br>
+				<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://www.russianballet.com.au/wp-content/uploads/2013/10/20111113-Russian-Ballet-0244_800x531.jpg"><br>
+				<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://dancelines.com.au/wp-content/uploads/2013/11/Amy-Harris-in-Paquita-The-Australian-Ballet-2013-photo-Jeff-Busby_1133-e1384073369337.jpg"><br>
+				<img class="hide-mobile" style="height:auto; width:auto; max-width:300px; max-height:300px;" src="http://images2.fanpop.com/image/photos/9700000/ballet-pics-ballet-9710858-350-473.jpg"><br>
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+            var columns = document.getElementsByClassName("one-third");
+            // var container = document.getElementById('container');
+            // var container = $('.one-third');
+            for (var i = 0 ; i < columns.length; i++){
+                columns[i].style.background = 'blue';
+            }
+            
+			// console.log("yes")
+            container.addEventListener('touchstart', function(e){
+                for (var i = 0 ; i < columns.length; i++){
+                    col = columns[i];
+                    console.log(col.style.background);
+                    if(col.style.background == 'red'){
+                        col.style.background = 'blue';
+                    }
+                    else if(col.style.background == 'blue'){
+                        col.style.background = 'red';
+                    }
+                }
+			});
+
+		</script>
+	</body>
+
+</html>
